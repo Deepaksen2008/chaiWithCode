@@ -46,6 +46,7 @@ const userSchema = new Schema({
     }
 }, {
     timestamps: true,
+    strictPopulate: false
 });
 
 userSchema.pre("save", async function (next) {
