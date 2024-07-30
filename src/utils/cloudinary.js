@@ -26,6 +26,16 @@ const uploadOnCloudinary = async (localFilePath) => {
     }
 }
 
+const getDataFromCloudinary = async (data) => {
+    try {
+        if (!data) return null;
+        const response = await cloudinary.api.resources({ type: 'upload', prefix: data });
+        return response;
+    } catch (error) {
+        return null;
+    }
+}
+
 const deleteCloudinaryImage = async (localFilePath) => {
     try {
         if (!localFilePath) return null;
