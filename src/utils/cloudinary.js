@@ -49,4 +49,4 @@ const deleteCloudinaryImage = async (localFilePath) => {
     }
 }
 
-export { uploadOnCloudinary, deleteCloudinaryImage }
+export { uploadOnCloudinary, getDataFromCloudinary, deleteCloudinaryImage }
